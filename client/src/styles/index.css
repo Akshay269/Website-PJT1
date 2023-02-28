@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Libre+Caslon+Text:ital@1&family=Merriweather+Sans:wght@500;700&family=Prompt:wght@500&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.29rem;
+}
+.emph {
+  font-family: "Prompt", sans-serif;
+}
+#hero {
+  background-image: url(../../src/assets/bg.jpg);
+  background-color: #c6c7c7;
+  transition: ease-in-out 1s;
+}
+.aboutbg {
+  background-image: url(../assets/about1.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about-text {
+  background-color: rgba(30, 29, 29, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.hometext {
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+}
+
+.hometext p {
+  margin: 2rem;
+  color: white;
+  /* white-space: nowrap; */
+  overflow: hidden;
+  /* width: 20em; */
+  font-size: 2.5rem;
+  /* animation: type 4s steps(60, end);  */
+}
+
+.hometext h1:nth-child(2) {
+  animation: type2 8s steps(60, end);
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+
+/* ::selection {
+  background: black;
+} */
+
+.serveButton {
+  background-color: #000c66;
+  color: white;
+  border-radius: 8px;
+}
+.serveButton button:hover {
+  background-color: #15259d;
+  color: whitesmoke;
+  transition: 0.5s;
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+}
+.dashbg {
+  background-color: #001220;
+}
+
+.dashcard {
+  /* background-color: #0014a8; */
+  background-color: rgba(208, 204, 204, 0.4);
+  backdrop-filter: blur(10px);
+}
+.accept {
+  background-color: rgba(169, 221, 151, 0.4);
+}
+.deny {
+  background-color: rgba(221, 151, 151, 0.4);
+}
+
+.edit-dash {
+  width: 5rem;
+  background-color: rgb(12, 112, 12);
+}
+.edit-dash:hover {
+  background-color: rgb(19, 161, 19);
+}
+
+.delete-dash {
+  width: 5rem;
+  background-color: rgba(255, 0, 0, 0.668);
+}
+.delete-dash:hover {
+  background-color: rgba(255, 0, 0, 0.974);
+}
+
+.servicesbg {
+  background-image: url(../assets/about1.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.services {
+  text-align: center;
+  justify-content: center;
+}
+
+.education {
+  --bg-color: #000c66;
+  --bg-color-light: #ffeeba;
+  --box-shadow-color: rgba(0, 0, 0, 0.48);
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  background: #000c66; /* fallback for old browsers */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
+    0 24px 46px var(--box-shadow-color);
+}
+
+.services:hover .cardtemp:not(:hover) {
+  filter: blur(10px);
+}
+
+.card:hover p {
+  color: white;
+}
+.card:hover .overlay {
+  transform: scale(4) translateZ(0);
+}
+
+.card:active {
+  transform: scale(1) translateZ(0);
+  box-shadow: 0 15px 24px rgba(0, 0, 0, 0.11),
+    0 15px 24px var(--box-shadow-color);
+}
+
+.card p {
+  font-size: 17px;
+  color: white;
+  margin-top: 30px;
+  z-index: 1000;
+  transition: color 0.3s ease-out;
+}
+
+.policy {
+  background-color: rgba(220, 198, 198, 0.4);
+  /* border: 5px red solid; */
+  box-shadow: 5px 20px 50px #000;
+  backdrop-filter: blur(10px);
+}
+
+.policybg {
+  background-image: url(../assets/about1.svg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  /* object-fit:; */
+}
+
+.team-container {
+  min-height: max-content;
+}
+@media only screen and (max-width: 768px) {
+  .team-container {
+    min-height: max-content;
+    width: fit-content;
+  }
+  .policybg{
+    height: 100vh;
+  }
+}
