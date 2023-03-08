@@ -1,4 +1,4 @@
-const base = "https://website-ab7e.onrender.com";
+const base = "http://localhost:5000";
 
 export const register_admin = async (obj) => {
   const res = await fetch(`${base}/api/admin/signup`, {
