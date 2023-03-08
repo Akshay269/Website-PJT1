@@ -40,7 +40,7 @@ app.post('/create-checkout-session', async (req, res) => {
 });
 
 app.use("/api/user", userRoutes);
-app.use("/api/admin", adminRoutes);
+// app.use("/api/admin", adminRoutes);
 
 app.listen(5000, () => {
   console.log("Backend Server running ");

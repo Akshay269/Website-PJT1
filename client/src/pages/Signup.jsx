@@ -3,11 +3,13 @@ import "../styles/signup.css";
 import Navbar from "../components/navbar";
 import about1 from "../assets/about1.svg";
 import Footer from "../components/Footer";
-import { NavLink, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { login_admin } from "../controllers/admin";
 import { login_user } from "../controllers/user";
 import { register_admin } from "../controllers/admin";
 import { register_user } from "../controllers/user";
+import "react-phone-number-input/style.css";
+import PhoneInput from "react-phone-number-input";
 
 export default function Signup() {
   const navigate = useNavigate();
@@ -15,13 +17,10 @@ export default function Signup() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [contact, setContact] = useState("");
-
   let [userType, setUserType] = useState("admin");
 
   const handleChange = async (e) => {
     e.preventDefault();
-
-    // userType
 
     if (userType === "admin") {
       let obj = {
@@ -64,7 +63,6 @@ export default function Signup() {
         } else {
           alert("Invalid login");
         }
-        // console.log(localStorage.getItem("admin_token"));
         window.location.reload();
       });
     } else if (login_userType === "user") {
@@ -83,10 +81,12 @@ export default function Signup() {
       });
     }
   };
+
+
   return (
     <>
       <Navbar />
-      <img className="imgabout absolute" src={about1} />
+      <img className="imgabout absolute" alt="signup" src={about1} />
       <div className="w-full h-screen bg-cover bg-center flex justify-center items-center px-4 bg-[#c7cacd]">
         <div className="main z-1 mt-32">
           <input
@@ -110,7 +110,7 @@ export default function Signup() {
                 <option value="" disabled selected hidden>
                   Admin/User
                 </option>
-                <option value="admin">Admin</option>
+                {/* <option value="admin">Admin</option> */}
                 <option value="user">User</option>
               </select>
               <input
@@ -137,16 +137,13 @@ export default function Signup() {
               />
 
               {userType === "user" && (
-                <input
-                  className={`input`}
-                  type="number"
-                  name="contact"
+                <PhoneInput
+                  className="input"
+                  id="contact"
                   placeholder="Contact"
                   required=""
                   value={contact}
-                  onChange={(e) => {
-                    setContact(e.target.value);
-                  }}
+                  onChange={setContact}
                 />
               )}
 
@@ -185,7 +182,7 @@ export default function Signup() {
                 <option value="" disabled selected hidden>
                   Admin/User
                 </option>
-                <option value="admin">Admin</option>
+                {/* <option value="admin">Admin</option> */}
                 <option value="user">User</option>
               </select>
               <input

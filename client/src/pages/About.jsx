@@ -4,7 +4,7 @@ import "../styles/index.css";
 import about1 from "../assets/about1.svg";
 import aboutus from "../assets/aboutimg.png";
 import Footer from "../components/Footer";
-import Navbar2 from "../components/Navbar2";
+
 
 export default function About() {
   return (

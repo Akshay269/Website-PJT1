@@ -52,6 +52,9 @@ input::placeholder {
   outline: none;
   border-radius: 5px;
 }
+#contact{
+  background: #e0dede;
+}
 .dropdown {
   width: 60%;
   /* height: 20px; */

@@ -3,7 +3,7 @@ import "../styles/team.css";
 const Team = (props) => {
   return (
     <>
-      <div class="team-container m-5 w-1/4">
+      <div class="team-container m-5 w-1/5">
         <div class="row vh-100">
           <div class="col-sm-6 col-lg-3 my-auto">
             <div class="teamBox shadow-sm p-4">

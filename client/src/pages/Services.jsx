@@ -56,12 +56,12 @@ export default function Services() {
             with a whole new personalised designing experience."
           />
 
-          <TeamCard
+          {/* <TeamCard
             img={webDev}
             title="Web Development"
             body="Want a personal space for your business? Create your own website
             with the extremely skilled coders and creators."
-          />
+          /> */}
           <TeamCard
             img={graphicDes}
             title="Graphic Designing"

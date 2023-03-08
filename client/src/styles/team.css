@@ -5,6 +5,7 @@
   overflow: hidden;
   text-align: center;
   max-height: 32rem;
+  min-height: 27rem;
 }
 .teamBox:before {
   position: absolute;
